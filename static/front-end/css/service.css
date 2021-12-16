@@ -1,0 +1,17 @@
+#our_service_section .service_items img{
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+}
+
+#our_service_section .service_items .media {
+    position: relative;
+    background-color: #F5F5FE;
+    box-shadow: 3px 3px 3px 3px gray;
+}
+
+#our_service_section .service_items .media .media-body h5{
+    text-align: left;
+    color: black;
+    padding-top: 20px;
+}

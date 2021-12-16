@@ -1,0 +1,153 @@
+#our_malls_sec {
+    position: relative;
+    margin-bottom: 120px;
+}
+#our_malls_sec .title_div {
+    position: relative;
+    top: 30px;
+    width: 100%;
+    background: linear-gradient(to right, rgba(104,159,56,1) 0%, rgba(139,195,74,1) 100%);
+    z-index: 200;
+}
+
+#our_malls_sec .our_malls_title {
+    position: relative;
+    font-weight: bold;
+    padding: 10px;
+    color: white;
+}
+
+#our_malls_sec .mall_list {
+    position: relative;
+    top: 50px;
+}
+
+#our_malls_sec .our_shops {
+    position: relative;
+    width: 100%;
+    height: 280px;
+}
+
+#our_malls_sec .our_shops img {
+    width: 100%;
+    height: 100%;
+    box-shadow: rgb(0 0 0 / 20%) 3px 5px 5px;
+}
+
+#our_malls_sec .mall_list .our_shops .shop_title_div  {
+    text-align: center;
+    width: 100%;
+    background: #F8AA6F;
+}
+
+#our_malls_sec .mall_list .our_shops .shop_title_div a h3 {
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+/* book an apointment */
+
+#book_apointment {
+    position: relative;
+    top: 60px;
+    margin-bottom: 70px;
+}
+
+#book_apointment .book_apointment_title_div {
+    width: 100%;
+    background: linear-gradient(to right, rgba(104,159,56,1) 0%, rgba(139,195,74,1) 100%);
+}
+#book_apointment .book_apointment_title_div h2 {
+    position: relative;
+    font-weight: bold;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+#book_apointment .intro_video {
+    position: relative;
+    top: 20px;
+    width: 100%;
+}
+
+.book_an_apointment_items .card{
+    border: 1px solid #F8AA6F;
+    box-shadow: 1px 1px 1px 1px rgba(104,159,56,1);
+    cursor: pointer !important;
+}
+
+.book_an_apointment_items .card:hover {
+    background: #F8AA6F !important;
+    color: white !important;
+    transition: 0.4s;
+}
+
+.book_an_apointment_items .card:hover .apointment_service_title {
+    color: white !important;
+
+}
+
+.book_an_apointment_items .card .card-body h5 {
+    color: rgba(104,159,56,1);
+    text-transform: uppercase;
+}
+
+
+/* ***************************footer******************** */
+.home_footer_updated .title h4{
+    color: white;
+    font-size: 18px;
+}
+
+.home_footer_updated div {
+    position: relative;
+    padding-top: 10px;
+}
+
+.home_footer_updated div li a{
+    color: white;
+}
+
+.home_footer_updated div li {
+    color: white;
+}
+
+.updated_footer_bottom .copy_right h6 {
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+}
+
+.updated_footer_bottom .com_name h6 {
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.updated_footer_bottom .dev_com_name h6 {
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+}
+
+
+/* convention hall */
+.convention_hall a {
+text-decoration: none;
+}
+
+.convention_hall a button{
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    background: rgba(104,159,56,1);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+}
