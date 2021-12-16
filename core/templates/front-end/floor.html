@@ -1,0 +1,47 @@
+{% extends 'front-end/index.html' %}
+{% load static %}
+
+
+{% block main_content %}
+
+         <section id="book_apointment">
+            <div class="container">
+
+               <!-- title -->
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="book_apointment_title_div">
+                        <h2>Explore Our Floors</h2>
+                     </div>
+                  </div>
+               </div>
+               <!-- ends title -->
+
+               <div class="row">
+
+                   <!-- col-1 -->
+                  <div class="col-md-12">
+                     <div class="row book_an_apointment_items" style="position: relative; top: 20px;">
+                        <!-- item-1 -->
+                        {% for floor in floor_list %}
+
+                        <div class="col-md-4 {% if forloop.counter > 3 %} mt-3 {% endif %}">
+                           <a href="{% url 'feFloorDetails' pk=floor.pk %}">
+                              <div class="card" style="width: 100%;height: 200px; position: relative;">
+                                 <div class="card-body">
+                                   <h5 class="card-title text-center apointment_service_title" style=" position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+                                      {{floor.floor_name}}</h5>
+                                 </div>
+                               </div>
+                           </a>
+                        </div>
+                         {% endfor %}
+                     </div>
+                  </div>
+
+               </div>
+
+            </div>
+         </section>
+
+{% endblock %}

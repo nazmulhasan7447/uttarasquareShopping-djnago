@@ -1,0 +1,89 @@
+{% extends 'front-end/index.html' %}
+{% load static %}
+
+
+{% block main_content %}
+        <!--Inner Header Start-->
+         <section class="wf100 p100 inner-header">
+            <div class="container">
+               <br><br>
+               <h1>Contact Us</h1>
+            </div>
+         </section>
+         <!--Inner Header End-->
+         <!--Contact Start-->
+         <section class="contact-page wf100 p80">
+            <div class="container">
+
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="contact-form">
+                        <h3>Feel Free to Contact us</h3>
+                        <ul class="cform">
+                           <form action="{% url 'feContactUs' %}" method="post" enctype="multipart/form-data">
+                              {% csrf_token %}
+                              <li class="half pr-15">
+                              <input type="text" name="name" class="form-control" placeholder="Full Name">
+                           </li>
+                           <li class="half pl-15">
+                              <input type="text" name="email" class="form-control" placeholder="Email">
+                           </li>
+                           <li class="half pr-15">
+                              <input type="text" name="phone" class="form-control" placeholder="Phone">
+                           </li>
+                           <li class="half pl-15">
+                              <input type="text" name="subj" class="form-control" placeholder="Subject">
+                           </li>
+                           <li class="full">
+                              <textarea class="textarea-control" name="msg" placeholder="Message"></textarea>
+                           </li>
+                           <li class="full">
+                              <input type="submit" value="Contact us" class="fsubmit">
+                           </li>
+                           </form>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="google-map">
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d7296.876834108284!2d90.3887636!3d23.8740676!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3755c4113665e685%3A0x889b7be2cb73ae11!2sUttara%20Square%2039%20%26%2041%20Sonargaon%20Janapath%20Road%2C%20Sector%2313%20Dhaka%201230!3m2!1d23.8740676!2d90.38876359999999!5e0!3m2!1sen!2sbd!4v1637073630285!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="container contact-info">
+               <div class="row">
+                  <div class="col-md-12">
+                     <h3>Contact Information</h3>
+                  </div>
+                   {% if contact_info %}
+                  <!--Contact Info Start-->
+                  <div class="col-md-4">
+                     <div class="c-info">
+                        <h6>Address:</h6>
+                        <p> {{contact_info.address}} </p>
+                     </div>
+                  </div>
+                  <!--Contact Info End-->
+                  <!--Contact Info Start-->
+                  <div class="col-md-4">
+                     <div class="c-info">
+                        <h6>Contact:</h6>
+                        <p><strong>Phone:</strong> {{contact_info.phone}}</p>
+                     </div>
+                  </div>
+                  <!--Contact Info End-->
+                  <!--Contact Info Start-->
+                  <div class="col-md-4">
+                     <div class="c-info">
+                        <h6>For More Information:</h6>
+                        <p><strong>Email:</strong> {{contact_info.email}}</p>
+                     </div>
+                  </div>
+                  <!--Contact Info End-->
+                   {% endif %}
+               </div>
+            </div>
+         </section>
+         <!--Contact End-->
+{% endblock %}

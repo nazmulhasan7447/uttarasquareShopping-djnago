@@ -1,0 +1,72 @@
+{% extends 'front-end/index.html' %}
+{% load static %}
+
+
+{% block main_content %}
+       <br><br><br>
+
+         <section id="book_apointment">
+            <div class="container">
+               <!-- title -->
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="book_apointment_title_div">
+                        <h2>Book an Apointment</h2>
+                     </div>
+                  </div>
+               </div>
+               <!-- ends title -->
+               <br><br>
+               <div class="row">
+
+                <div class="col-md-3"></div>
+
+                <div class="col-md-6" style="box-shadow: 1px 1px 5px 2px gray; padding: 10px;">
+                    <div>
+                        <p class="text-justify">
+                            <strong>What time suits you?</strong>
+                        </p>
+                        <p class="text-justify">
+                            Please indicate your 1st, 2nd and 3rd choice below – appointments will be made on a first come first served basis and are subject to availability. Each appointment takes approximately 60 minutes. Customer Services will contact you to confirm your booking.
+                        </p>
+                    </div>
+                    <div class="apointment_form" >
+                        <form action="{% url 'feBookAppointment' %}" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Type Name...." required><br>
+
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Type Email...." required><br>
+
+                            <label for="phone">Phone</label>
+                            <input type="number" name="phone" id="phone" class="form-control" placeholder="Type Phone No...." required><br>
+
+                            <label for="date_time">1st Choice Day*</label>
+                            <input type="datetime-local" name="date_time1" id="date_time" class="form-control" placeholder="Date Time..." required><br>
+
+                            <label for="date_time">2nd Choice Day* (optional)</label>
+                            <input type="datetime-local" name="date_time2" id="date_time" class="form-control" placeholder="Date Time..."><br>
+
+                            <label for="date_time">3rd Choice Day* (optional)</label>
+                            <input type="datetime-local" name="date_time3" id="date_time" class="form-control" placeholder="Date Time..."><br>
+
+                            <label for="sub">Subject</label>
+                            <input type="text" name="subj" id="sub" class="form-control" placeholder="Type Subject...." required><br>
+
+                            <label for="msg">Message*</label>
+                            <textarea name="message" class="form-control" id="msg" style="width: 100%;" rows="5" placeholder="Type Message.." required></textarea><br>
+
+                            <input type="submit" name="submit_btn" value="Send To Us" class="form-control" style="border: 1px solid#F8AA6F; cursor: pointer; background-color: green; color: white;">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-3"></div>
+
+               </div>
+
+            </div>
+         </section>
+
+{% endblock %}

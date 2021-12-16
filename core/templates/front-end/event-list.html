@@ -1,0 +1,68 @@
+{% extends 'front-end/index.html' %}
+{% load static %}
+
+
+
+{% block main_content %}
+        <!--Inner Header Start-->
+         <section class="wf100 p100 inner-header">
+            <div class="container">
+               <br><br>
+               <h1>Our Upcoming Events</h1>
+            </div>
+         </section>
+         <!--Inner Header End-->
+         <!--Causes Start-->
+         <section class="wf100 p80 events">
+            <div class="event-grid-2">
+               <div class="container">
+
+                  {% if event_list %}
+                  <div class="row">
+                     {% for event in event_list %}
+                     <!--Blog Post Start-->
+                     <div class="col-lg-4 col-md-6">
+                        <div class="event-post">
+                           <div class="event-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="{{event.event_defualt_img.url}}" style="height: 300px" alt=""></div>
+                           <div class="event-txt">
+                              <h5><a href="#">{{event.title}}</a></h5>
+                              <ul class="etime">
+                                 <li><strong>Date:</strong> {{event.date}}</li>
+                                 <li><strong>Time:</strong> {{event.time_start}} - {{event.time_end}}</li>
+                              </ul>
+                              <p class="venue"><span>Venue:</span> {{event.place}} </p>
+                           </div>
+                        </div>
+                     </div>
+                     <!--Blog Post End-->
+                     {% endfor %}
+                  </div>
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="gt-pagination mt20">
+                           <nav>
+                              <ul class="pagination">
+                                 <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <i class="fas fa-angle-left"></i> </a> </li>
+                                 <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                 <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                 <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <i class="fas fa-angle-right"></i> </a> </li>
+                              </ul>
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+                  {% else %}
+                  <div class="row">
+                     <div class="col-md-12">
+                        <h3 class="text-center">Not Added Yet!</h3>
+                     </div>
+                  </div>
+                  {% endif %}
+
+               </div>
+            </div>
+         </section>
+         <!--Causes End-->
+
+{% endblock %}

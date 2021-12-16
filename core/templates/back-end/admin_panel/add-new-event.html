@@ -1,0 +1,166 @@
+{% extends 'back-end/admin_panel/index.html' %}
+{% load static %}
+
+{% block main-block %}
+
+
+<!-- begin app-main -->
+<div class="app-main" id="main">
+    <!-- begin container-fluid -->
+    <div class="container-fluid">
+        <!-- begin row -->
+
+        <!--            django message framework-->
+        <div class="row">
+            <div class="col-xl-3"></div>
+            <div class="col-xl-6">
+                {% if messages %}
+                {% for message in messages %}
+
+                <div {% if message.tags %} class="alert alert-{{ message.tags }} alert-dismissible fade show" {% endif %} role="alert">
+                    <strong>{{ message }}!</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                {% endfor %}
+                {% endif %}
+            </div>
+            <div class="col-xl-3"></div>
+        </div>
+
+        <!--            django message framework ends-->
+
+        <div class="row">
+            <div class="col-md-1 col-xl-1"></div>
+            <div class="col-md-10 col-xl-10">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card card-statistics">
+                            <div class="card-header">
+                                <div class="card-heading">
+                                    <h4 class="card-title">Add New Event and Schedule It!</h4>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <form action="{% url 'apAddNewEvent' %}" method="POST" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                     <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="event_title">Event Title</label>
+                                                    <input type="text" name="event_title" class="form-control" id="event_title"
+                                                   placeholder="Event Name/Title" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="eventplace">Event Place</label>
+                                                    <input type="text" name="event_place" class="form-control" id="eventplace"
+                                                   placeholder="Event place" required>
+                                                </div>
+                                            </div>
+
+                                    <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="event_title">Event Date</label>
+                                                    <input type="date" name="event_date" class="form-control" id="event_date"
+                                                   placeholder="Event Date" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="eventplace">Event Publisher Name</label>
+                                                    <input type="text" name="event_publisher_name" class="form-control" id="event_publisher_name"
+                                                   placeholder="Event publisher Name (optional)">
+                                                </div>
+                                            </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                                    <label for="eventplace">Event Starting Time</label>
+                                                    <input type="text" name="event_time_start" class="form-control" id="event_time_start"
+                                                   placeholder="Start: 12:30 am" required>
+
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="event_title">Event Ending Time</label>
+                                                    <input type="text" name="event_end_time" class="form-control" id="event_end_time"
+                                                   placeholder="End: 2:30 pm" required>
+                                                </div>
+                                            </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+
+                                                    <label for="event_gust_1">Event Guest One Image</label>
+                                                    <input type="file" name="event_guest_1_img" class="form-control" id="event_gust_1"
+                                                   placeholder="Event Guest Image(optional)"><br>
+
+                                                    <label for="event_gust_1">Event Guest One Name</label>
+                                                    <input type="text" name="event_guest_1_name" class="form-control" id="event_guest_1_name" placeholder="Event Guest Name (optional)">
+                                                    <br>
+                                                    <label for="event_gust_1">Event Guest One Designation</label>
+                                                    <input type="text" name="event_guest_1_desig" class="form-control" id="event_guest_1_desig" placeholder="Event Guest Designation (optional)">
+
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="event_gust_1">Event Guest Two Image</label>
+                                                    <input type="file" name="event_guest_2_img" class="form-control" id="event_gust_2"
+                                                   placeholder="Event Guest Image(optional)"><br>
+
+                                                    <label for="event_gust_1">Event Guest Two Name</label>
+                                                    <input type="text" name="event_guest_2_name" class="form-control" id="event_guest_2_name" placeholder="Event Guest Name (optional)">
+                                                    <br>
+                                                    <label for="event_gust_1">Event Guest Two Designation</label>
+                                                    <input type="text" name="event_guest_2_desig" class="form-control" id="event_guest_2_desig" placeholder="Event Guest Designation (optional)">
+                                                </div>
+
+                                                <div class="form-group col-md-6">
+                                                    <label for="event_gust_1">Event Guest Three Image</label>
+                                                    <input type="file" name="event_guest_3_img" class="form-control" id="event_gust_3"
+                                                   placeholder="Event Guest Image(optional)"><br>
+
+                                                    <label for="event_gust_1">Event Guest Three Name</label>
+                                                    <input type="text" name="event_guest_3_name" class="form-control" id="event_guest_3_name" placeholder="Event Guest Name (optional)">
+                                                    <br>
+                                                    <label for="event_gust_1">Event Guest Three Designation</label>
+                                                    <input type="text" name="event_guest_3_desig" class="form-control" id="event_guest_3_desig" placeholder="Event Guest Designation (optional)">
+                                                </div>
+
+                                                <div class="form-group col-md-6">
+                                                    <label for="event__img">Event Image</label>
+                                                    <input type="file" name="event__img" class="form-control" id="event__img"
+                                                   placeholder="Event Guest Image" required><br>
+                                                </div>
+                                            </div>
+                                    {% if siteContactInforList %}
+                                    <button type="submit" class="btn btn-primary" disabled>Disabled</button>
+                                    {% else %}
+                                    <button type="submit" class="btn btn-primary">Add Now</button>
+                                    {% endif %}
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-1 col-xl-1"></div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container-fluid -->
+</div>
+
+
+<script>
+    const newsIMG = document.getElementById('upload-site-logo');
+    const img_preview = document.getElementById('logo-preview');
+
+
+    newsIMG.onchange = () =>{
+    let img_url = URL.createObjectURL(newsIMG.files[0]);
+    img_preview.src = img_url;
+    };
+
+</script>
+
+<!-- end app-main -->
+{% endblock %}

@@ -1,0 +1,135 @@
+{% extends 'front-end/index.html' %}
+{% load static %}
+
+
+
+{% block main_content %}
+
+
+<!--Inner Header Start-->
+         <section class="wf100 p100 inner-header">
+            <div class="container">
+               <br><br><br>
+               <h1>Find Your Perfect Convention Hall</h1>
+            </div>
+         </section>
+         <!--Inner Header End-->
+         <!--Contact Start-->
+         <section class="shop wf100 p80">
+            <div class="container">
+
+               {% if shop_or_store_list %}
+               <div class="row">
+                  {% for stor_or_shop in shop_or_store_list %}
+                  <!--Pro Box Start-->
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="product-box">
+                        <div class="pro-thumb"><img src="{{stor_or_shop.store_img.url}}" style="height: 220px;" alt=""></div>
+                        <div class="pro-txt">
+                           <h6><a href="#">{{stor_or_shop.brand_name}}</a></h6>
+                           <p class="pro-price">F#{{stor_or_shop.floor_no}}</p>
+                           <p class="pro-price">{{stor_or_shop.product_person_type}}</p>
+                           <p class="pro-price"> <strong>Visit</strong>: {{stor_or_shop.store_website_link}}</p>
+                        </div>
+                     </div>
+                  </div>
+                  <!--Pro Box End-->
+                  {% endfor %}
+               </div>
+               {% else %}
+               <div class="row">
+
+
+                  <!--Pro Box Start-->
+                  <div class="col-lg-4 col-sm-6">
+                     <div class="product-box">
+                        <div class="pro-thumb"><img src="{% static 'front-end/images/convention_hall/1.jpeg' %}" style="height: 220px;" alt=""></div>
+                        <div class="pro-txt convention_hall">
+                           <a href="/fe/book/appointment/"><button type="button">Click To Book</button></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!--Pro Box End-->
+
+                  <!--Pro Box Start-->
+                  <div class="col-lg-4 col-sm-6">
+                     <div class="product-box">
+                        <div class="pro-thumb"><img src="{% static 'front-end/images/convention_hall/2.jpg' %}" style="height: 220px;" alt=""></div>
+                        <div class="pro-txt convention_hall">
+                           <a href="/fe/book/appointment/"><button type="button">Click To Book</button></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!--Pro Box End-->
+
+
+                  <!--Pro Box Start-->
+                  <div class="col-lg-4 col-sm-6">
+                     <div class="product-box">
+                        <div class="pro-thumb"><img src="{% static 'front-end/images/convention_hall/3.jpg' %}" style="height: 220px;" alt=""></div>
+                        <div class="pro-txt convention_hall">
+                           <a href="/fe/book/appointment/"><button type="button">Click To Book</button></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!--Pro Box End-->
+
+                  <!--Pro Box Start-->
+                  <div class="col-lg-4 col-sm-6">
+                     <div class="product-box">
+                        <div class="pro-thumb"><img src="{% static 'front-end/images/convention_hall/4.jpg' %}" style="height: 220px;" alt=""></div>
+                        <div class="pro-txt convention_hall">
+                           <a href="/fe/book/appointment/"><button type="button">Click To Book</button></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!--Pro Box End-->
+
+                  <!--Pro Box Start-->
+                  <div class="col-lg-4 col-sm-6">
+                     <div class="product-box">
+                        <div class="pro-thumb"><img src="{% static 'front-end/images/convention_hall/23.jpeg' %}" style="height: 220px;" alt=""></div>
+                        <div class="pro-txt convention_hall">
+                           <a href="/fe/book/appointment/"><button type="button">Click To Book</button></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!--Pro Box End-->
+
+                <!--Pro Box Start-->
+                  <div class="col-lg-4 col-sm-6">
+                     <div class="product-box">
+                        <div class="pro-thumb"><img src="{% static 'front-end/images/convention_hall/12.jpeg' %}" style="height: 220px;" alt=""></div>
+                        <div class="pro-txt convention_hall">
+                           <a href="/fe/book/appointment/"><button type="button">Click To Book</button></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!--Pro Box End-->
+
+               </div>
+               {% endif %}
+
+
+<!--               <div class="row">-->
+<!--                  <div class="col-md-12">-->
+<!--                     <div class="gt-pagination">-->
+<!--                        <nav>-->
+<!--                           <ul class="pagination">-->
+<!--                              <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <i class="fas fa-angle-left"></i> </a> </li>-->
+<!--                              <li class="page-item"><a class="page-link" href="#">1</a></li>-->
+<!--                              <li class="page-item active"><a class="page-link" href="#">2</a></li>-->
+<!--                              <li class="page-item"><a class="page-link" href="#">3</a></li>-->
+<!--                              <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <i class="fas fa-angle-right"></i> </a> </li>-->
+<!--                           </ul>-->
+<!--                        </nav>-->
+<!--                     </div>-->
+<!--                  </div>-->
+<!--               </div>-->
+
+
+            </div>
+         </section>
+         <!--Contact End-->
+
+{% endblock %}

@@ -1,0 +1,371 @@
+{% extends 'front-end/index.html' %}
+{% load static %}
+
+
+{% block about_us_css %}
+      <link href="{% static 'front-end/css/slick.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block main_content %}
+
+         <!--Inner Header Start-->
+         <section class="wf100 p100 inner-header">
+            <div class="container">
+               <br><br>
+               <h1>Who We Are?</h1>
+            </div>
+         </section>
+         <!--Inner Header End-->
+
+         <!-- about us -->
+         <section id="about_us_section">
+            <div class="container">
+
+               <div class="row">
+                  <div class="col-md-12">
+                     <br><br><br>
+                     <h2 class="glow_about text-center" style="color: #F68D20;">The Uttara Square</h2>
+                     <br>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col-md-12">
+                     {{about_us.about_us|safe}}
+                  </div>
+               </div>
+
+            </div>
+         </section>
+<br><br>
+         <!-- ends about us -->
+
+         <!--About Start-->
+         <section class="wf100 about">
+            <!--About Txt Video Start-->
+            <!-- <div class="about-video-section wf100">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-6">
+                        <div class="about-text">
+                           <h5>Message From Our Chairman</h5>
+                           <h2 style="color: #F68D20;">Mr. XXXXXXXXX</h2>
+                           <p><strong>Many serious issues faced by our modern world are food adulteration, environmental pollution, rapid climate change
+                               and those are the most significant challenges that the world is facing in our day.</strong></p>
+                           <p>
+                              Specially, Food adulteration has existed for centuries.
+                              But, it began to be a severe issue following the industrial revolution in the 19th century.
+                              Some of the adulterants are highly toxic for the body leading to heart failure, liver disorders,
+                              kidney disorders & many more. Adulteration also affects the quality of the product leading hindrance
+                              to the nutritive
+                              value of the product thus leading to nutritive deficiency in our body.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="col-lg-6">
+                        <div class="about-video-img">  <img src="images/uttara_square_img/1.jpg" alt=""> </div>
+                     </div>
+                  </div>
+
+                  <div class="row">
+                     <div class="col-lg-6">
+                        <div class="about-video-img">  <img src="images/uttara_square_img/2.jpg" alt=""> </div>
+                     </div>
+                     <div class="col-lg-6">
+                        <div class="about-text">
+                           <h5>Message From Our CEO</h5>
+                           <h2 style="color: #F68D20;">Mr. XXXXXXXX</h2>
+                           <p><strong>Many serious issues faced by our modern world are food adulteration, environmental pollution, rapid climate change
+                               and those are the most significant challenges that the world is facing in our day.</strong></p>
+                           <p>
+                              Specially, Food adulteration has existed for centuries.
+                              But, it began to be a severe issue following the industrial revolution in the 19th century.
+                              Some of the adulterants are highly toxic for the body leading to heart failure, liver disorders,
+                              kidney disorders & many more. Adulteration also affects the quality of the product leading hindrance
+                              to the nutritive
+                              value of the product thus leading to nutritive deficiency in our body.
+                           </p>
+
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </div> -->
+            <!--About Txt Video End-->
+            <!--Our Success Story Start-->
+<!--            <div class="our-success-story wf100">-->
+<!--               <div class="container">-->
+<!--                  <div class="row">-->
+<!--                     <div class="col-lg-4">-->
+<!--                        <div class="story-title-bg"> <strong class="" style="font-size: 43px;">-->
+<!--                           Uttara</strong> <strong class="" style="font-size: 43px;">Square</strong>-->
+<!--                        </div>-->
+<!--                     </div>-->
+<!--                     <div class="col-lg-8">-->
+<!--                        <div class="section-title-2">-->
+<!--                           &lt;!&ndash; <h5>About our History</h5> &ndash;&gt;-->
+<!--                           <h2>Things Should Know About Us</h2>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash;eco History Start&ndash;&gt;-->
+<!--                        <div class="eco-history">-->
+<!--                           <div class="timeline-slider">-->
+<!--                              <div class="timeline-nav">-->
+<!--                                 <div><span><strong>2016 - 2017</strong></span></div>-->
+<!--                                 <div><span><strong>2017 - 2018</strong></span></div>-->
+<!--                                 &lt;!&ndash; <div><span><strong>2006 - 2009</strong></span></div> &ndash;&gt;-->
+<!--                                 &lt;!&ndash; <div><span><strong>2009 - 2012</strong></span></div> &ndash;&gt;-->
+<!--                                 &lt;!&ndash; <div><span><strong>2012 - 2015</strong></span></div> &ndash;&gt;-->
+<!--                                 <div><span><strong>2018 - 2021</strong></span></div>-->
+<!--                              </div>-->
+<!--                              <div class="timeline">-->
+<!--                                 &lt;!&ndash;Timeline Text Start&ndash;&gt;-->
+<!--                                 <div>-->
+<!--                                    <div class="row">-->
+<!--                                       <div class=" col-4">-->
+<!--                                          <div class="timeline-box">-->
+<!--                                             <h6>Brand Values</h6>-->
+<!--                                             <p class="text-justify">-->
+<!--                                                In 2016, we first started to think how we can reduce food adulteration, and ensure fresh & organic food for the people. And took our first step to work with modern farming technologies.-->
+<!--                                             </p>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                       <div class=" col-4">-->
+<!--                                          <div class="timeline-box">-->
+<!--                                             <h6>Current Events</h6>-->
+<!--                                             <p class="text-justify"> As first step, started to work with RAS, Aquaponics and other modern agro technologies. Spent more than 1+ year to research,-->
+<!--                                                experiment and analysis on those technologies to convert into . </p>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                       <div class=" col-4">-->
+<!--                                          <div class="timeline-box">-->
+<!--                                             <h6>Promotion </h6>-->
+<!--                                             <p class="text-justify"> In the mean time, we made 30+ successful projects around our country. And created 25+ new entrepreneurs who started-->
+<!--                                                farming as their main business and source of earnings. </p>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                    </div>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;Timeline Text End&ndash;&gt;-->
+<!--                                 &lt;!&ndash;Timeline Text Start&ndash;&gt;-->
+<!--                                 <div>-->
+<!--                                    <div class="row">-->
+<!--                                       <div class=" col-4">-->
+<!--                                          <div class="timeline-box">-->
+<!--                                             <h6>Brand Values</h6>-->
+<!--                                             <p class="text-justify"> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                       <div class=" col-4">-->
+<!--                                          <div class="timeline-box">-->
+<!--                                             <h6>Current Events </h6>-->
+<!--                                             <p class="text-justify"> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                       <div class=" col-4">-->
+<!--                                          <div class="timeline-box">-->
+<!--                                             <h6>Promotion</h6>-->
+<!--                                             <p class="text-justify"> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                    </div>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;Timeline Text End&ndash;&gt;-->
+<!--                                 &lt;!&ndash;Timeline Text Start&ndash;&gt;-->
+<!--                                 <div>-->
+<!--                                    <div class="row">-->
+<!--                                       <div class=" col-4">-->
+<!--                                          <div class="timeline-box">-->
+<!--                                             <h6>Brand Values</h6>-->
+<!--                                             <p class="text-justify"> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                       <div class=" col-4">-->
+<!--                                          <div class="timeline-box">-->
+<!--                                             <h6>Current Events</h6>-->
+<!--                                             <p class="text-justify"> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                       <div class=" col-4">-->
+<!--                                          <div class="timeline-box">-->
+<!--                                             <h6>Promotion </h6>-->
+<!--                                             <p class="text-justify"> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                    </div>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;Timeline Text End&ndash;&gt;-->
+<!--                                 &lt;!&ndash;Timeline Text Start&ndash;&gt;-->
+<!--                                 <div>-->
+<!--                                    <div class="row">-->
+<!--                                       <div class=" col-4">-->
+<!--                                          <div class="timeline-box">-->
+<!--                                             <h6>Results of Hardwork</h6>-->
+<!--                                             <p class="text-justify"> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                       <div class=" col-4">-->
+<!--                                          <div class="timeline-box">-->
+<!--                                             <h6>Project </h6>-->
+<!--                                             <p class="text-justify"> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                       <div class=" col-4">-->
+<!--                                          <div class="timeline-box">-->
+<!--                                             <h6>We Started</h6>-->
+<!--                                             <p class="text-justify"> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                    </div>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;Timeline Text End&ndash;&gt;-->
+<!--                                 &lt;!&ndash;Timeline Text Start&ndash;&gt;-->
+<!--                                 <div>-->
+<!--                                    <div class="row">-->
+<!--                                       <div class=" col-4">-->
+<!--                                          <div class="timeline-box">-->
+<!--                                             <h6>We Started</h6>-->
+<!--                                             <p class="text-justify"> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                       <div class=" col-4">-->
+<!--                                          <div class="timeline-box">-->
+<!--                                             <h6>Results of Hardwork</h6>-->
+<!--                                             <p class="text-justify"> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                       <div class=" col-4">-->
+<!--                                          <div class="timeline-box">-->
+<!--                                             <h6>Project </h6>-->
+<!--                                             <p class="text-justify"> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                    </div>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;Timeline Text End&ndash;&gt;-->
+<!--                                 &lt;!&ndash;Timeline Text Start&ndash;&gt;-->
+<!--                                 <div>-->
+<!--                                    <div class="row">-->
+<!--                                       <div class=" col-4">-->
+<!--                                          <div class="timeline-box">-->
+<!--                                             <h6>Results of Hardwork</h6>-->
+<!--                                             <p> We have a very strong group of our senior team members and volunteers. But I must explain to you how all this mistaken idea of denounce pleasure and praising pain was born and I will give you a complete account. </p>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                       <div class=" col-4">-->
+<!--                                          <div class="timeline-box">-->
+<!--                                             <h6>Project </h6>-->
+<!--                                             <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee. </p>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                       <div class=" col-4">-->
+<!--                                          <div class="timeline-box">-->
+<!--                                             <h6>We Started</h6>-->
+<!--                                             <p> In 1998, We took step towards to make healthy and safe Eco Environment in the different fields, and our passion is: to clean the Eco Environment for the next generations who shall face the problem in future. </p>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                    </div>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;Timeline Text End&ndash;&gt;-->
+<!--                              </div>-->
+<!--                           </div>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash;Political History End&ndash;&gt;-->
+<!--                     </div>-->
+<!--                  </div>-->
+<!--               </div>-->
+<!--            </div>-->
+            <!--Our Success Story End-->
+            <!--Why you Need to Choose Ecova Start-->
+            <div class="choose-ecova wf100 p80">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-8">
+                        <div class="section-title-2">
+                           <h5>Why you Need to</h5>
+                           <h2>Choose Uttara Square</h2>
+                        </div>
+                         <!-- new -->
+                         <div class="row">
+                           <div class="col-6">
+                              <div class="eco-box">
+                                 <span class="econ-icon"><i class="far fa-money-bill-alt"></i></span>
+                                 <h5> Most popular shopping–cum </h5>
+                                 <p> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
+                              </div>
+                           </div>
+                           <div class="col-6">
+                              <div class="eco-box">
+                                 <span class="econ-icon"><i class="far fa-money-bill-alt"></i></span>
+                                 <h5> Secured and neat & clean shopping mall </h5>
+                                 <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id. </p>
+                              </div>
+                           </div>
+                           <div class="col-6">
+                              <div class="eco-box">
+                                 <span class="econ-icon"><i class="far fa-money-bill-alt"></i></span>
+                                 <h5> Women-friendly mall </h5>
+                                 <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id. </p>
+                              </div>
+                           </div>
+                           <div class="col-6">
+                              <div class="eco-box">
+                                 <span class="econ-icon"><i class="far fa-money-bill-alt"></i></span>
+                                 <h5>  Separate prayer room, breastfeeding room, baby changing room </h5>
+                                 <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id. </p>
+                              </div>
+                           </div>
+
+                           <div class="col-6">
+                              <div class="eco-box">
+                                 <span class="econ-icon"><i class="far fa-money-bill-alt"></i></span>
+                                 <h5>  Parking facility </h5>
+                                 <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id. </p>
+                              </div>
+                           </div>
+
+                           <div class="col-6">
+                              <div class="eco-box">
+                                 <span class="econ-icon"><i class="far fa-money-bill-alt"></i></span>
+                                 <h5> Lorem Ipsum </h5>
+                                 <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id. </p>
+                              </div>
+                           </div>
+
+                        </div>
+                        <!-- ends new -->
+                     </div>
+                     <div class="col-lg-4">
+                        <div class="volunteer-form">
+                           <div class="section-title">
+                              <h3>Join us Now</h3>
+                           </div>
+                           <ul>
+                              <li>
+                                 <input type="text" class="form-control" placeholder="Your Name" aria-label="Your Name">
+                              </li>
+                              <li>
+                                 <input type="text" class="form-control" placeholder="Email Address" aria-label="Email Address">
+                              </li>
+                              <li>
+                                 <input type="text" class="form-control" placeholder="Contact" aria-label="Contact">
+                              </li>
+                              <li>
+                                 <input type="submit" class="fsubmit" value="Signup to Join us">
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--Why you Need to Choose Ecova End-->
+         </section>
+         <!--About End-->
+
+{% endblock %}
+
+{% block about_js %}
+      <script src="{% static 'front-end/js/slick.min.js' %}"></script>
+{% endblock %}
+

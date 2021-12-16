@@ -1,0 +1,182 @@
+{% extends 'front-end/index.html' %}
+{% load static %}
+
+
+{% block main_content %}
+
+         <!-- our malls****************************** -->
+         <section id="our_malls_sec">
+            <div class="container">
+
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="title_div">
+                        <h2 class="text-center our_malls_title">Items At {{floor_no.floor_name}}</h2>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="row mall_list">
+                  {% if floor_details %}
+                  <!-- item-1 -->
+                  {% for x in floor_details %}
+                  <div class="col-md-4 our_shops">
+                     <a href="#">
+                        <img src="{{x.img.url}}" alt="">
+                     </a>
+                     <div class="shop_title_div">
+                        <a href="#"><h3>{{x.title}}</h3></a>
+                     </div>
+                  </div>
+                  {% endfor %}
+
+                  {% else %}
+                  <div class="col-md-12">
+                     <h3 class="text-center">No Items Found!</h3>
+                  </div>
+                  {% endif %}
+
+               </div>
+
+
+            </div>
+         </section>
+         <!-- ends our malls****************************** -->
+
+         <section id="book_apointment">
+            <div class="container">
+
+               <!-- title -->
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="book_apointment_title_div">
+                        <h2>Book an Apointment</h2>
+                     </div>
+                  </div>
+               </div>
+               <!-- ends title -->
+
+               <div class="row">
+                  <!-- col-1 -->
+                  <div class="col-md-6">
+                     <div class="intro_video">
+                        {% if book_appointment_img %}
+                        <img src="{{ book_appointment_img.img.url }}" style="width: 100%; height: 360px;" alt="">
+                        {% else %}
+                        <img src="{% static 'front-end/images/shops/outlook.jpg' %}" style="width: 100%; height: 360px;" alt="">
+                        {% endif %}
+                     </div>
+                  </div>
+
+                  <!-- col-2 -->
+                  <div class="col-md-6">
+                     <div class="row book_an_apointment_items" style="position: relative; top: 20px;">
+                        <!-- item-1 -->
+                        <div class="col-md-6">
+                           <a href="/fe/book/appointment">
+                              <div class="card" style="width: 100%;">
+                                 <div class="card-body">
+                                   <h5 class="card-title text-center apointment_service_title">Book an event</h5>
+                                 </div>
+                               </div>
+                           </a>
+                        </div>
+
+                        <!-- item-2 -->
+                        <div class="col-md-6">
+                           <a href="/fe/book/appointment">
+                              <div class="card" style="width: 100%;">
+                                 <div class="card-body">
+                                   <h5 class="card-title text-center apointment_service_title">rent/buy store</h5>
+                                 </div>
+                               </div>
+                           </a>
+                        </div>
+
+                     </div>
+                     <br>
+                     <div class="row book_an_apointment_items" style="position: relative; top: 20px;">
+                        <!-- item-1 -->
+                        <div class="col-md-6">
+                           <a href="#">
+                              <div class="card" style="width: 100%;">
+                                 <div class="card-body">
+                                   <h5 class="card-title text-center apointment_service_title">Career with us</h5>
+                                 </div>
+                               </div>
+                           </a>
+                        </div>
+
+                        <!-- item-2 -->
+                        <div class="col-md-6">
+                           <a href="/fe/contact">
+                              <div class="card" style="width: 100%;">
+                                 <div class="card-body">
+                                   <h5 class="card-title text-center apointment_service_title">get in touch</h5>
+                                 </div>
+                               </div>
+                           </a>
+                        </div>
+
+                     </div>
+                     <br>
+                     <div class="row book_an_apointment_items" style="position: relative; top: 20px;">
+                        <!-- item-1 -->
+                        <div class="col-md-6">
+                           <a href="#">
+                              <div class="card" style="width: 100%;">
+                                 <div class="card-body">
+                                   <h5 class="card-title text-center apointment_service_title">read our blogs</h5>
+                                 </div>
+                               </div>
+                           </a>
+                        </div>
+
+                        <!-- item-2 -->
+                        <div class="col-md-6">
+                           <a href="/fe/event/list">
+                              <div class="card" style="width: 100%;">
+                                 <div class="card-body">
+                                   <h5 class="card-title text-center apointment_service_title" style="font-size: 22px;">upcoming events</h5>
+                                 </div>
+                               </div>
+                           </a>
+                        </div>
+
+                     </div>
+
+                     <br>
+                     <div class="row book_an_apointment_items" style="position: relative; top: 20px;">
+                        <!-- item-1 -->
+                        <div class="col-md-6">
+                           <a href="/fe/shop">
+                              <div class="card" style="width: 100%;">
+                                 <div class="card-body">
+                                   <h5 class="card-title text-center apointment_service_title">top malls</h5>
+                                 </div>
+                               </div>
+                           </a>
+                        </div>
+
+                        <!-- item-2 -->
+                        <div class="col-md-6">
+                           <a href="/fe/restaurants/list">
+                              <div class="card" style="width: 100%;">
+                                 <div class="card-body">
+                                   <h5 class="card-title text-center apointment_service_title" style="font-size: 22px;">top restaurants</h5>
+                                 </div>
+                               </div>
+                           </a>
+                        </div>
+
+                     </div>
+
+                  </div>
+
+               </div>
+
+            </div>
+         </section>
+
+
+{% endblock %}

@@ -1,0 +1,200 @@
+{% extends 'front-end/index.html' %}
+{% load static %}
+
+
+
+{% block main_content %}
+        <!--Inner Header Start-->
+         <section class="wf100 p100 inner-header">
+            <div class="container">
+               <br><br><br>
+               <h1>Find Your Restaurant</h1>
+            </div>
+         </section>
+         <!--Inner Header End-->
+         <!--Contact Start-->
+         <section class="shop wf100 p80">
+            <div class="container">
+
+               <div class="row">
+                  <div class="col-md-12">
+                     <form action="" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+
+                           <div class="row">
+                            <div class="col-md-5">
+                               <input type="text" class="form-control" placeholder="Find Restaurant">
+                             </div>
+
+                              <div class="col-md-5">
+                                  <select name="" id="" class="form-control">
+                                      <option value="">Select Floor</option>
+                                      <option value="">Ground Floor</option>
+                                      <option value="">1st Floor</option>
+                                      <option value="">2nd Floor</option>
+                                      <option value="">3rd Floor</option>
+                                  </select>
+                              </div>
+
+                              <div class="col-md-2">
+                                <input type="submit" class="form-control" value="Search">
+                             </div>
+
+                           </div>
+
+                        </div>
+                     </form>
+                  </div>
+               </div>
+
+               {% if restaurants_list %}
+               <div class="row">
+
+                  {% for restaurant in restaurants_list %}
+                  <!--Pro Box Start-->
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="product-box">
+                        <div class="pro-thumb"><img src="{{restaurant.restaurants_img.url}}" style="height: 220px;" alt=""></div>
+                        <div class="pro-txt">
+                           <h6><a href="#">{{restaurant.name}}</a></h6>
+                           <p class="pro-price">Floor No. #{{restaurant.floor_no}}</p>
+                           <p class="pro-price"> <strong>Visit</strong>: {{restaurant.resrants_website_link}}</p>
+                        </div>
+                     </div>
+                  </div>
+                  <!--Pro Box End-->
+                  {% endfor %}
+
+               </div>
+               {% else %}
+               <div class="row">
+
+
+                  <!--Pro Box Start-->
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="product-box">
+                        <div class="pro-thumb"><img src="{% static 'front-end/images/restaurents/logo1.png' %}" style="height: 220px;" alt=""></div>
+                        <div class="pro-txt">
+                           <h6><a href="#">Arby's</a></h6>
+                           <p class="pro-price">F#2</p>
+                           <p class="pro-price"> <strong>Visit</strong>: wwww.domain.com</p>
+                        </div>
+                     </div>
+                  </div>
+                  <!--Pro Box End-->
+
+                  <!--Pro Box Start-->
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="product-box">
+                        <div class="pro-thumb"><img src="{% static 'front-end/images/restaurents/logo2.png' %}" style="height: 220px;" alt=""></div>
+                        <div class="pro-txt">
+                           <h6><a href="#">Burger King</a></h6>
+                           <p class="pro-price">F#2</p>
+                           <p class="pro-price"><strong>Visit</strong>: wwww.domain.com</p>
+                        </div>
+                     </div>
+                  </div>
+                  <!--Pro Box End-->
+
+                  <!--Pro Box Start-->
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="product-box">
+                        <div class="pro-thumb"><img src="{% static 'front-end/images/restaurents/logo3.png' %}" style="height: 220px;" alt=""></div>
+                        <div class="pro-txt">
+                           <h6><a href="#">Carl's Jr.</a></h6>
+                           <p class="pro-price">F#2</p>
+                           <p class="pro-price"><strong>Visit</strong>: wwww.domain.com</p>
+                        </div>
+                     </div>
+                  </div>
+                  <!--Pro Box End-->
+
+                  <!--Pro Box Start-->
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="product-box">
+                        <div class="pro-thumb"><img src="{% static 'front-end/images/restaurents/logo4.png' %}" style="height: 220px;" alt=""></div>
+                        <div class="pro-txt">
+                           <h6><a href="#">Choc'nette</a></h6>
+                           <p class="pro-price">F#6</p>
+                           <p class="pro-price"><strong>Visit</strong>: wwww.domain.com</p>
+                        </div>
+                     </div>
+                  </div>
+                  <!--Pro Box End-->
+
+                  <!--Pro Box Start-->
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="product-box">
+                        <div class="pro-thumb"><img src="{% static 'front-end/images/restaurents/logo5.png' %}" style="height: 220px;" alt=""></div>
+                        <div class="pro-txt">
+                           <h6><a href="#">Günaydın Köfte</a></h6>
+                           <p class="pro-price">F#6</p>
+                           <p class="pro-price"><strong>Visit</strong>: wwww.domain.com</p>
+                        </div>
+                     </div>
+                  </div>
+                  <!--Pro Box End-->
+
+                  <!--Pro Box Start-->
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="product-box">
+                        <div class="pro-thumb"><img src="{% static 'front-end/images/restaurents/logo6.jpg' %}" style="height: 220px;" alt=""></div>
+                        <div class="pro-txt">
+                           <h6><a href="#">HD İskender</a></h6>
+                           <p class="pro-price">F#6</p>
+                           <p class="pro-price"><strong>Visit</strong>: wwww.domain.com</p>
+                        </div>
+                     </div>
+                  </div>
+                  <!--Pro Box End-->
+
+                  <!--Pro Box Start-->
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="product-box">
+                        <div class="pro-thumb"><img src="{% static 'front-end/images/restaurents/kfc.png' %}" style="height: 220px;" alt=""></div>
+                        <div class="pro-txt">
+                           <h6><a href="#">KFC</a></h6>
+                           <p class="pro-price">F#6</p>
+                           <p class="pro-price"><strong>Visit</strong>: wwww.domain.com</p>
+                        </div>
+                     </div>
+                  </div>
+                  <!--Pro Box End-->
+
+                  <!--Pro Box Start-->
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="product-box">
+                        <div class="pro-thumb"><img src="{% static 'front-end/images/restaurents/krispy_kreme.png' %}" style="height: 220px;" alt=""></div>
+                        <div class="pro-txt">
+                           <h6><a href="#">Krispy Kreme</a></h6>
+                           <p class="pro-price">F#6</p>
+                           <p class="pro-price"><strong>Visit</strong>: wwww.domain.com</p>
+                        </div>
+                     </div>
+                  </div>
+                  <!--Pro Box End-->
+
+
+               </div>
+               {% endif %}
+
+
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="gt-pagination">
+                        <nav>
+                           <ul class="pagination">
+                              <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <i class="fas fa-angle-left"></i> </a> </li>
+                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <i class="fas fa-angle-right"></i> </a> </li>
+                           </ul>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!--Contact End-->
+{% endblock %}

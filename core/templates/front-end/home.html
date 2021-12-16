@@ -1,0 +1,344 @@
+{% extends 'front-end/index.html' %}
+{% load static %}
+
+
+{% block main_content %}
+
+          <!--Slider Start-->
+         <section id="home-slider" class="owl-carousel owl-theme wf100">
+            {% if bannerList %}
+            {% for x in bannerList %}
+            <div class="item">
+               <div class="slider-caption">
+                  <div class="container">
+                     <!-- <strong>100k Plants Grown in 2018,</strong>
+                     <h1>Heal the World</h1>
+                     <p> Environmental awareness is not a trend that comes into style a few months and stops. Individuals working towards making a small impact on Earth.</p> -->
+                  </div>
+               </div>
+               <!-- <img src="images/h1-slide1.jpg" style="height: 600px;"  alt="">  -->
+               <img src="{{x.img.url}}" style="max-height: 700px;"   alt="">
+            </div>
+            {% endfor %}
+            {% else %}
+            <div class="item">
+               <div class="slider-caption">
+                  <div class="container">
+                     <!-- <strong>100k Plants Grown in 2018,</strong>
+                     <h1>Heal the World</h1>
+                     <p> Environmental awareness is not a trend that comes into style a few months and stops. Individuals working towards making a small impact on Earth.</p> -->
+                  </div>
+               </div>
+               <!-- <img src="images/h1-slide1.jpg" style="height: 600px;"  alt="">  -->
+               <h3 class="text-center" style="padding-top: 20px; padding-bottom: 20px;">No Banner Added Yet!</h3>
+            </div>
+            {% endif %}
+         </section>
+         <!--Slider End-->
+         <!--About Section Start-->
+         <section class="home-about wf100 p80">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="about-txt">
+                        <h2> <span>Uttara Square</span> is one of the best
+                           "Shopping Mall" 
+                        </h2>
+                        <p> If anything’s hot in today’s economy, it’s saving money, including a broad range of green businesses helping people save energy, water, and other resources. <strong>Definitely, you can go with this business as it is a nothing but the future.</strong> </p>
+                        <p> When you embrace food modern eco-friendly farming, adulteration awareness as a part of your daily life, you can defintiely think about the Environment business. </p>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="about-pic">
+                        <div class="pic1">
+                          <div id="pic-slider" class="owl-carousel owl-theme">
+        					         <div class="item">
+                                <img src="{% static 'front-end/images/shops/new/shop3.jpg' %}" style="height: 400px" alt="">
+                              </div>
+                              <div class="item">
+                                 <img src="{% static 'front-end/images/shops/new/shop2.jpg' %}" style="height: 400px" alt="">
+                              </div>
+                              <div class="item">
+                                <img src="{% static 'front-end/images/shops/shop3.jpg' %}" style="height: 400px" alt="">
+                              </div>
+					        	</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!--About Section End-->
+
+         <!-- our malls****************************** -->
+         <section id="our_malls_sec">
+            <div class="container">
+
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="title_div">
+                        <h2 class="text-center our_malls_title">Explore Our Malls</h2>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="row mall_list">
+
+                  <!-- item-1 -->
+                  <div class="col-md-4 our_shops">
+                     <a href="/fe/shop">
+                        <img src="{% static 'front-end/images/shops/new/shop6.jpg' %}" alt="">
+                     </a>
+                     <div class="shop_title_div">
+                        <a href="/fe/shop"><h3>Stores</h3></a>
+                     </div>
+                  </div>
+
+                  <!-- item-2 -->
+                  <div class="col-md-4 our_shops">
+                     <a href="/fe/restaurants/list">
+                        <img src="{% static 'front-end/images/shops/new/dine.jpg' %}" alt="">
+                     </a>
+                     <div class="shop_title_div">
+                        <a href="/fe/restaurants/list"><h3>Restaurants</h3></a>
+                     </div>
+                  </div>
+
+                  <!-- item-3 -->
+                  <div class="col-md-4 our_shops">
+                     <a href="/">
+                        <img src="{% static 'front-end/images/shops/new/entertainment1.jpg' %}" alt="">
+                     </a>
+                     <div class="shop_title_div">
+                        <a href="/"><h3>entertainment</h3></a>
+                     </div>
+                  </div>
+
+               </div>
+
+               <br><br><br>
+               <div class="row mall_list">
+
+                  <!-- item-1 -->
+                  <div class="col-md-4 our_shops mt-3">
+                     <a href="/">
+                        <img src="{% static 'front-end/images/shops/new/office2.jpg' %}" alt="">
+                     </a>
+                     <div class="shop_title_div">
+                        <a href="/"><h3>Office</h3></a>
+                     </div>
+                  </div>
+
+                  <!-- item-2 -->
+                  <div class="col-md-4 our_shops mt-3">
+                     <a href="/">
+                        <img src="{% static 'front-end/images/shops/new/atm.jpg' %}" alt="">
+                     </a>
+                     <div class="shop_title_div">
+                        <a href="/"><h3>Bank & atm</h3></a>
+                     </div>
+                  </div>
+
+                  <!-- item-2 -->
+                  <div class="col-md-4 our_shops mt-3">
+                     <a href="/">
+                        <img src="{% static 'front-end/images/shops/electronicss.jpg' %}" alt="">
+                     </a>
+                     <div class="shop_title_div">
+                        <a href="/fe/shop"><h3>electronics</h3></a>
+                     </div>
+                  </div>
+
+
+               </div>
+
+            </div>
+         </section>
+         <!-- ends our malls****************************** -->
+
+         <section id="book_apointment">
+            <div class="container">
+
+               <!-- title -->
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="book_apointment_title_div">
+                        <h2>Book an Apointment</h2>
+                     </div>
+                  </div>
+               </div>
+               <!-- ends title -->
+
+               <div class="row">
+                  <!-- col-1 -->
+                  <div class="col-md-6">
+                     <div class="intro_video">
+                        {% if book_appointment_img %}
+                        <img src="{{ book_appointment_img.img.url }}" style="width: 100%; height: 360px;" alt="">
+                        {% else %}
+                        <h3>Not Added Yet!</h3>
+                        {% endif %}
+                     </div>
+                  </div>
+
+                  <!-- col-2 -->
+                  <div class="col-md-6">
+                     <div class="row book_an_apointment_items" style="position: relative; top: 20px;">
+                        <!-- item-1 -->
+                        <div class="col-md-6">
+                           <a href="/fe/book/appointment">
+                              <div class="card" style="width: 100%;">
+                                 <div class="card-body">
+                                   <h5 class="card-title text-center apointment_service_title">Book an event</h5>
+                                 </div>
+                               </div>
+                           </a>
+                        </div>
+
+                        <!-- item-2 -->
+                        <div class="col-md-6">
+                           <a href="/fe/book/appointment">
+                              <div class="card" style="width: 100%;">
+                                 <div class="card-body">
+                                   <h5 class="card-title text-center apointment_service_title">rent/buy store</h5>
+                                 </div>
+                               </div>
+                           </a>
+                        </div>
+
+                     </div>
+                     <br>
+                     <div class="row book_an_apointment_items" style="position: relative; top: 20px;">
+                        <!-- item-1 -->
+                        <div class="col-md-6">
+                           <a href="#">
+                              <div class="card" style="width: 100%;">
+                                 <div class="card-body">
+                                   <h5 class="card-title text-center apointment_service_title">Career with us</h5>
+                                 </div>
+                               </div>
+                           </a>
+                        </div>
+
+                        <!-- item-2 -->
+                        <div class="col-md-6">
+                           <a href="/fe/contact">
+                              <div class="card" style="width: 100%;">
+                                 <div class="card-body">
+                                   <h5 class="card-title text-center apointment_service_title">get in touch</h5>
+                                 </div>
+                               </div>
+                           </a>
+                        </div>
+
+                     </div>
+                     <br>
+                     <div class="row book_an_apointment_items" style="position: relative; top: 20px;">
+                        <!-- item-1 -->
+                        <div class="col-md-6">
+                           <a href="#">
+                              <div class="card" style="width: 100%;">
+                                 <div class="card-body">
+                                   <h5 class="card-title text-center apointment_service_title">read our blogs</h5>
+                                 </div>
+                               </div>
+                           </a>
+                        </div>
+
+                        <!-- item-2 -->
+                        <div class="col-md-6">
+                           <a href="/fe/event/list">
+                              <div class="card" style="width: 100%;">
+                                 <div class="card-body">
+                                   <h5 class="card-title text-center apointment_service_title" style="font-size: 22px;">upcoming events</h5>
+                                 </div>
+                               </div>
+                           </a>
+                        </div>
+
+                     </div>
+
+                     <br>
+                     <div class="row book_an_apointment_items" style="position: relative; top: 20px;">
+                        <!-- item-1 -->
+                        <div class="col-md-6">
+                           <a href="/fe/shop">
+                              <div class="card" style="width: 100%;">
+                                 <div class="card-body">
+                                   <h5 class="card-title text-center apointment_service_title">top malls</h5>
+                                 </div>
+                               </div>
+                           </a>
+                        </div>
+
+                        <!-- item-2 -->
+                        <div class="col-md-6">
+                           <a href="/fe/restaurants/list">
+                              <div class="card" style="width: 100%;">
+                                 <div class="card-body">
+                                   <h5 class="card-title text-center apointment_service_title" style="font-size: 22px;">top restaurants</h5>
+                                 </div>
+                               </div>
+                           </a>
+                        </div>
+
+                     </div>
+
+                  </div>
+
+               </div>
+
+            </div>
+         </section>
+
+
+
+         <!--News Post Section Start-->
+         <section class="news-posts wf100 p80">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <!--title start-->
+                     <div class="section-title">
+                        <strong>Our Next</strong>
+                        <h2>Events</h2>
+                     </div>
+                     <!--title end-->
+                  </div>
+               </div>
+               {% if event_list %}
+               <div class="row">
+                  {% for event in event_list %}
+                  <div class="col-md-4">
+                     <div class="event-posts wf100">
+                        <!--Blog Post Start-->
+                        <div class="event-post">
+                           <div class="event-thumb">
+                              <a href="#"><i class="fas fa-link"></i></a> <img src="{{event.event_defualt_img.url}}" style="height: 280px;" alt="">
+                              <ul class="post-meta">
+                                 <li>{{event.date}} </li>
+                                 <li> {{event.time_start}} - {{event.time_end}}</li>
+                              </ul>
+                           </div>
+                           <div class="event-txt">
+                              <h6><a href="#">{{event.title}}</a></h6>
+                              <p><i class="fas fa-map-marker-alt"></i> {{event.place}} </p>
+                           </div>
+                        </div>
+                        <!--Blog Post End-->
+                     </div>
+                  </div>
+                  {% endfor %}
+               </div>
+               {% else %}
+               <div class="row">
+                  <div class="col-md-12">
+                     <h3 class="text-center" >No Event Added Yet!</h3>
+                  </div>
+               </div>
+               {% endif %}
+            </div>
+         </section>
+         <!--News Post Section End-->
+
+{% endblock %}

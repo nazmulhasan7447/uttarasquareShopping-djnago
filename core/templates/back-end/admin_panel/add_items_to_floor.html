@@ -1,0 +1,103 @@
+{% extends 'back-end/admin_panel/index.html' %}
+{% load static %}
+
+{% block main-block %}
+
+
+<!-- begin app-main -->
+<div class="app-main" id="main">
+    <!-- begin container-fluid -->
+    <div class="container-fluid">
+        <!-- begin row -->
+
+        <!--            django message framework-->
+        <div class="row">
+            <div class="col-xl-1"></div>
+            <div class="col-xl-10">
+                {% if messages %}
+                {% for message in messages %}
+
+                <div {% if message.tags %} class="alert alert-{{ message.tags }} alert-dismissible fade show" {% endif %} role="alert">
+                    <strong>{{ message }}!</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                {% endfor %}
+                {% endif %}
+            </div>
+            <div class="col-xl-1"></div>
+        </div>
+
+        <!--            django message framework ends-->
+
+        <div class="row">
+            <div class="col-md-1 col-xl-1"></div>
+            <div class="col-md-10 col-xl-10">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card card-statistics">
+                            <div class="card-header">
+                                <div class="card-heading">
+                                    <h4 class="card-title">Add New Store/Items By Floor</h4>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <form action="{% url 'apAddItemsToFloor' %}" method="POST" enctype="multipart/form-data">
+                                    {% csrf_token %}
+
+                                    <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="product_for">Floor NO</label>
+                                                    <select name="floor_no" id="product_for" class="form-control">
+                                                        <option value="">Select Floor</option>
+                                                        {% for x in floor_list %}
+                                                        <option value="{{x.pk}}">{{x.floor_name}}</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                </div>
+                                                <br>
+                                                <div class="form-group col-md-6">
+                                                    <label for="store_img">Store Image</label>
+                                                    <input type="file" name="store_img" class="form-control" id="store_img" required>
+                                                    <br><br>
+                                                </div>
+
+                                            <div class="form-group col-md-6">
+                                                    <label for="store_img">Store Name</label>
+                                                    <input type="text" name="store_name" class="form-control" id="store_img" placeholder="Store Name" required>
+                                                    <br><br>
+                                                </div>
+
+                                            </div>
+
+                                    <button type="submit" class="btn btn-primary">Add Now</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1 col-xl-1"></div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container-fluid -->
+</div>
+
+
+<script>
+    const newsIMG = document.getElementById('upload-site-logo');
+    const img_preview = document.getElementById('logo-preview');
+
+
+    newsIMG.onchange = () =>{
+    let img_url = URL.createObjectURL(newsIMG.files[0]);
+    img_preview.src = img_url;
+    };
+
+</script>
+
+<!-- end app-main -->
+{% endblock %}
